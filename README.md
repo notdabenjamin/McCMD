@@ -1,6 +1,6 @@
 <h1>McCMD</h1>
 <h2>What is it?</h2>
-McCMD (Commonly called Minecraft Python Command Block) is an experimental, Minecraft themed, coding language that converts REAL MINECRAFT COMMANDS into Python Code, and will give you an output
+McCMD (Commonly called Python Command Block) is an experimental, Minecraft themed, coding language that converts REAL MINECRAFT COMMANDS into Python Code, and will give you an output
 right inside the program.
 Think of it as a Command Block, but in python! (yeah, no duh)
 <h2>About McCMD</h2>
