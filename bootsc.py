@@ -1,10 +1,18 @@
 import sys
 import time
+def finalstageboot():
+    print("SMs Verified!")
+    name = input(f"Welcome, {NM}! What is your name?\n")
+    print(f"Hello there, {name}!")
+    time.sleep(1)
+    print("Booting... Please Wait...")
+    exec(open("menu.py").read())
+
 
 def boot():
-    print("Reminder: If you recieve an error saying 'name ver is not defined' it means you have launched McCMD from the boot.sc\nfile instead of main.py and you need to reboot the program.")
+    print(f"{tcolors.WARNING}Reminder: If you recieve an error saying 'name ver is not defined' it means you have launched McCMD from the boot.sc\nfile instead of main.py and you need to reboot the program.")
     time.sleep(2)
-    print("Verification will start shortly.. Please wait...")
+    print(f"{tcolors.OKBLUE}Verification will start shortly.. Please wait...")
     time.sleep(2)
     print("Verification has started!")
     time.sleep(1)
@@ -17,22 +25,26 @@ def boot():
         time.sleep(1)
         if sm == "y":
             print("System: SMs are enabled!")
+            finalstageboot()
         if sm != "y":
-            print("SMs (System Messages are disabled)! This will also disable the Command Prompt on the menu and is NOT reccomended.")
+            print(f"{tcolors.FAIL}SMs (System Messages) are disabled! This will also disable the Command Prompt.")
             smcon = input("Continue? [y/n]")
             if smcon == "y":
                 sys.exit(
                     "Uh oh! McCMD has encountered an error! \n\nDev Reason: Disabling SMs is not allowed in Version 1.1, please restart the program with SMs enabled.")
+            else:
+                sys.exit(
+                    "User had chosen to end the program. You may ignore this error.")
     else:
         sys.exit("Uh oh! McCMD has encountered an error! Invalid Variable! \n\nDev Reason: Head into Main.py and set ver to y.")
-    exec(open("sel.py").read())
+    exec(open("menu.py").read())
 def DBboot():
-    print("WARNING: IF YOU REALLY DID LAUNCH THE APP FROM BOOTSC.PY WE HIGHLY RECCOMMEND ENDING AND RERUNNING THE PROGRAM, AS VERIFICATION WILL BE SKIPPING CAUSING MULTIPLE ERRORS. YOU ARE ABLE TO SAFELY CONTINUE IF YOU WOULD LIKE, BUT IT IS RECOMMENDED YOU KNOW WHAT YOU ARE DOING.")
+    print("WARNING: IF YOU REALLY DID LAUNCH THE APP FROM BOOTSC.PY WE HIGHLY RECCOMMEND ENDING AND RERUNNING THE\nPROGRAM, AS VERIFICATION WILL BE SKIPPING CAUSING MULTIPLE ERRORS.YOU ARE ABLE TO SAFELY CONTINUE IF YOU WOULD LIKE, BUT IT IS RECOMMENDED YOU KNOW WHAT YOU ARE DOING.")
     DB = input("Are you sure you want to continue? [y/n]")
     if DB == "y":
         print("Continuing without Verification... Please wait...")
         time.sleep(2)
-        exec(open("sel.py").read())
+        finalstageboot()
     if DB != "n":
         sys.exit("User had chosen to end the program. You may ignore this error.")
 print("Testing... Testing...")
@@ -44,7 +56,7 @@ if tst != "Hello World":
 print(tst)
 time.sleep(1)
 print("Test Completed Successfully! Welcome, User!")
-multichoice = input("McCMD Boot Wizard:\n\n1. Boot Sel.py (The App)\n2. Skip Verification (Lauched from Bootsc.py)\n\nYour Choice: ")
+multichoice = input(f"{tcolors.OKBLUE}McCMD Boot Wizard:\n\n1. Boot menu.py (The App)\n2. Skip Verification (Lauched from Bootsc.py)\n\nYour Choice: ")
 if multichoice == "1":
     print("McCMD will boot shortly, please wait...")
     time.sleep(3)
@@ -56,4 +68,3 @@ if multichoice == "1":
 if multichoice == "2":
     DBboot()
 
-exec(open("sel.py").read())

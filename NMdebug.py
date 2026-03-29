@@ -4,12 +4,12 @@ import sys
 
 # - = OR
 # NM List -
-# dev-developer
+# dev
 
 # NM EARLY List -
 # error
 
-# Default = User
+# Default = user
 NM = "user"
 
 if NM == "user" or NM == "dev" or NM == "developer":
