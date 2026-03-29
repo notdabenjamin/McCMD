@@ -6,4 +6,6 @@ right inside the program.
 Think of it as a Command Block, but in python! (yeah, no duh)
 <h2>About McCMD</h2>
 McCMD is a joke project meant to test how good python is at creating a coding language inside a coding language. McCMD is owned by NotDaBenjamin. Credit is not required, but appreciated.
-
+<h2>Help</h2>
+All code are Minecraft commands, for ex. in Free Code typing "say 'Hello World'" will print "Hello World".
+<h2></h2>
