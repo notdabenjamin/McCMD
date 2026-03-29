@@ -1,4 +1,4 @@
-<img src="https://media.discordapp.net/attachments/1487847929938182338/1487858544995864676/McCMD_Logo__2_-removebg-preview.png?ex=69caabc0&is=69c95a40&hm=19904e5e89e3c3e88f78abfaf6992371f2651b0bcaee14ccd1d5ea3cf5802f95&=&format=webp&quality=lossless&width=713&height=548"></img>
+<img src="https://cdn.discordapp.com/attachments/1487847929938182338/1487859081166323712/McCMD_Logo__2_-removebg-preview_1.png?ex=69caac40&is=69c95ac0&hm=17009f82493ec269f6e940ce6fff93f37e48a8ee255665a5ee08512a65d0fb2b"></img>
 <h1></h1>
 WARNING: McCMD is NOT optimized to run on every software, the entire software was made on VS Code and PyCharm and was also slightly tested on Windows Command Prompt. We recommend running it on PyCharm or CMD, as VS Code has large amounts of bugs. It is reccommended that you use a Non-Web based python compiler, as Web based often have low access to python libraries, which McCMD heavily relies on. We have tried our best to make it compatible with every single software, but it seems like it is impossible. 
 <h2>What is it?</h2>
