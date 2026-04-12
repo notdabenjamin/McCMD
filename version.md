@@ -1,8 +1,12 @@
 Betav1.0.1
 
 What does the version number mean?
+Let's take v1.2.3
 
-Let's take 1.0.0
+V = Version
 
-Full Release      Pre-Release     Beta/Testing  
-     1      .         0       .        0
+Full Release: 1
+
+Beta/Testing: 2
+
+Pre-Realese: 3
