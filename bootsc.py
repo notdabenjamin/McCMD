@@ -2,15 +2,15 @@ import sys
 import time
 def finalstageboot():
     print("SMs Verified!")
-    name = input(f"Welcome, {NM}! What is your name?\n")
-    print(f"Hello there, {name}!")
+    name = input(f"{tcolors.OKGREEN}Welcome, {NM}! What is your name?\n")
+    print(f"{tcolors.OKGREEN}Hello there, {name}!")
     time.sleep(1)
     print("Booting... Please Wait...")
     exec(open("menu.py").read())
 
 
 def boot():
-    print(f"{tcolors.WARNING}Reminder: If you recieve an error saying 'name ver is not defined' it means you have launched McCMD from the boot.sc\nfile instead of main.py and you need to reboot the program.")
+    print(f"{tcolors.WARNING}Reminder: If you recieve an error saying 'name ver is not defined' it means you have launched McCMD from the bootsc.py\nfile instead of main.py and you need to reboot the program.")
     time.sleep(2)
     print(f"{tcolors.OKBLUE}Verification will start shortly.. Please wait...")
     time.sleep(2)
@@ -67,4 +67,5 @@ if multichoice == "1":
     boot()
 if multichoice == "2":
     DBboot()
-
+else:
+    sys.exit("Uh oh! McCMD has encountered an error! McCMD Boot Wizard could not interpret the provided variable correctly. \n\nDev Reason: An invalid prase was given in the McCMD Boot Wizard, likely an invalid choice when told to select a way to boot.")
