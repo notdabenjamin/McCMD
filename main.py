@@ -18,6 +18,7 @@ print("\n" * 100)
 # Settings
 ver = "y"
 sm = "y"
+Test = "Yes"
 
 class tcolors:
     HEADER = '\033[95m'
@@ -31,10 +32,17 @@ class tcolors:
     UNDERLINE = '\033[4m'
     RESET = '\033[0m'  # Resets color and style
 
-freedesc = "\n\nWelcome to Free Code!\nFree Code allows you to write and run code all inside of the file! You can Copy & Paste code you already\nhave instead of needing a text file like in //import, giving new users a way to learn the language!\n\nSettings:\nSMs: Enabled\nAttempted Error Desc: Enabled\nImporting: Disabled\nRecommended: For new users\n\nMcCMDFreeCodev Beta 1.0\nPress enter to continue:\n"
+freedesc = "\n\nWelcome to Free Code!\nFree Code allows you to write and run code all inside of the file! You can Copy & Paste code you already\nhave instead of needing a text file like in //import, giving new users a way to learn the language!\n\nSettings:\nSMs: Enabled\nAttempted Error Desc: Enabled\nImporting: Disabled\nRecommended: For new users\n\nMcCMDFreeCodev Beta 1.0\nPress enter to head back to the menu:\n"
 
+# Version and Test ID, these are used to identify the version of the program and if the user is running a test, this is used for debugging purposes and to help users know if they are running a test or not. The Test ID is a unique identifier for each test, allowing developers to track and manage different tests effectively.
+Version = "BETAv1.0.1"
+TestID = "5"
 
-yn = input(f"{tcolors.WARNING}WARNING: McCMD is NOT optimized to run on every software, the entire software was made on VS Code and PyCharm and was also\nslightly tested on Windows Command Prompt. We recommend running it on PyCharm or CMD, as VS Code has large amounts\nof bugs. It is reccommended that you use a Non-Web based python compiler, as Web based often have low access to python\nlibraries, which McCMD heavily relies on. We have tried our best to make it compatible with every single software, but it seems like it is impossible.\n\n{tcolors.RESET}McCMD is a joke project meant to test how good python is at creating a coding language inside a coding language.\n\nMcCMD is owned by NotDaBenjamin.\nCredit is not required, but appreciated.\n\nLearn how to use McCMD on the Official GitHub Page\nPress Y to agree\n\n")
+if Test == "Yes":
+    print("YOU ARE CURRENTLY RUNNING A TEST, YOUR TEST ID IS: " + TestID + " Stable Version: " + Version)
+else:
+    print(Version)
+yn = input(f"{tcolors.WARNING}WARNING: McCMD is NOT optimized to run on every software, the entire software was made on VS Code and PyCharm and was also\nslightly tested on Windows Command Prompt. We recommend running it on PyCharm or CMD, as VS Code has large amounts\nof bugs. It is reccommended that you use a Non-Web based python compiler, as Web based often have low access to python\nlibraries, which McCMD heavily relies on. We have tried our best to make it compatible with every single software, but it seems like it is impossible.\n\n{tcolors.RESET}McCMD is a joke project meant to test how good python is at creating a coding language inside a coding language.\n\nMcCMD is owned by NotDaBenjamin.\nCredit is not required, but appreciated.\n\nLearn how to use McCMD by going to https://pythoncommandblock.pages.dev/ or on the Official GitHub Page.\nPress Y to agree\n\n")
 ynl = yn.lower()
 if ynl == "y":
     time.sleep(.5)
