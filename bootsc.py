@@ -1,6 +1,9 @@
 import sys
 import time
+time.sleep(1)
+
 def finalstageboot():
+    global name
     print("SMs Verified!")
     name = input(f"{tcolors.OKGREEN}Welcome, {NM}! What is your name?\n")
     print(f"{tcolors.OKGREEN}Hello there, {name}!")
@@ -31,7 +34,7 @@ def boot():
             smcon = input("Continue? [y/n]")
             if smcon == "y":
                 sys.exit(
-                    "Uh oh! McCMD has encountered an error! \n\nDev Reason: Disabling SMs is not allowed in Version 1.1, please restart the program with SMs enabled.")
+                    f"Uh oh! McCMD has encountered an error! \n\nDev Reason: Disabling SMs is not allowed in {Version}, please restart the program with SMs enabled.")
             else:
                 sys.exit(
                     "User had chosen to end the program. You may ignore this error.")
@@ -65,7 +68,7 @@ if multichoice == "1":
     print("Booting... Please stand-by!")
     time.sleep(1)
     boot()
-if multichoice == "2":
+elif multichoice == "2":
     DBboot()
 else:
     sys.exit("Uh oh! McCMD has encountered an error! McCMD Boot Wizard could not interpret the provided variable correctly. \n\nDev Reason: An invalid prase was given in the McCMD Boot Wizard, likely an invalid choice when told to select a way to boot.")
